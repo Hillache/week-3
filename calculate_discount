@@ -1,0 +1,32 @@
+def calculated_discount(price, discount_percentage):
+     """
+    Calculate the final price after applying the discount.
+
+    Parameters:
+    - price (float): The original price of the item.
+    - discount_percentage (float): The discount percentage to apply.
+
+    Returns:
+    - float: The final price after discount.
+    """
+     if discount_percentage>= 20:
+         discount = price * (discount_percentage / 100)
+         final_price = price - discount
+         return final_price
+     else:
+         return price   
+     
+# Example usage
+price = 500.0
+discount_percentage = 25.0
+final_price = calculated_discount(price, discount_percentage)   
+print(f"The final price after a {discount_percentage}% discount is: {final_price:.2f}")
+# Output: The final price after a 25.0% discount is: 375.00
+
+# Example usage with a discount percentage less than 20%    
+price = 500.0
+discount_percentage = 15.0
+final_price = calculated_discount(price, discount_percentage)
+print(f"The final price after a {discount_percentage}% discount is: {final_price:.2f}")
+# Output: The final price after a 15.0% discount is: 500.00
+
